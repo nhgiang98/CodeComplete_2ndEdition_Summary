@@ -1,4 +1,4 @@
-# CODE COMPLETE 2ND CONDITION
+# Code Complete 2nd Edition
 Source: [Code Complete 2nd Edition](http://aroma.vn/web/wp-content/uploads/2016/11/code-complete-2nd-edition-v413hav.pdf)
 
 ## Content and purpose 
@@ -14,7 +14,7 @@ Source: [Code Complete 2nd Edition](http://aroma.vn/web/wp-content/uploads/2016/
 	* Coding and Debugging
 	* Integration
 	* Developer testing (unit testing and integration testing) 
-*The quality of the construction substantially affects the quality of the software. 
+* The quality of the construction substantially affects the quality of the software. 
 
 ### Chapter 4: Key Construction Decisions 
 * Every programming language has strengths and weaknesses. So should be choose and use a language that you've used before. It helps you will become more experienced and more productive.
@@ -35,7 +35,7 @@ Source: [Code Complete 2nd Edition](http://aroma.vn/web/wp-content/uploads/2016/
 * Variables have naming corresponding with purposes. Ex: loop index, naming status, naming
 * A good name tends to express the "what" more than "how".
 * A variable name can contain the variable contents, the kind of data and the scope or visibility of the variable.
-* Avoid using name with similar meanings such as "lineNumber" and "lineIndex".
+* Avoid using name with similar meanings such as `lineNumber` and `lineIndex`.
 * Avoid using name with different meanings but similar names.
 
 ### Chapter 12: Fundamental Data Types 
@@ -65,48 +65,48 @@ Source: [Code Complete 2nd Edition](http://aroma.vn/web/wp-content/uploads/2016/
 * Use the default statement to detect legitimate defaults, or to detect errors and nothing else.
 
 ### Chapter 16: Controlling Loops 
-#### a.Selecting the kind of loop
+#### a. Selecting the kind of loop
 * Use `while` loop when you are not sure exactly how many times the loop to iterate.
 * Keep `for` loop simple, consider `while` loop if you are explicitly changing the index value.
 
-#### b.Controlling the Loops
+#### b. Controlling the Loops
 * Put initialization code directly before the loop
 * Use `while (true)` or `for (; ;)` to write an infinite loop.
 * Do not change the index of a `for` loop to make it terminate. 
 * Avoid using the loop index value after the loop; instead assign a final value to a variable at the appropriate point inside the loop.
 
 ### Chapter 17: Unusual Control Structures
-#### a.Recursion
+#### a. Recursion
 * Make sure the recursion stops: Handle the case when recursion stops.
 * Consider to use recursion because it is very complicated.
-* Use "new" key work to create objects on the heap for local variables 	in recursive functions.
+* Use `new` to create objects on the heap for local variables in recursive functions.
 
-#### b.`goto`
+#### b. `goto`
 * Use `goto` to jump to a previously defined label.
 * The `goto` statement is not recommended because it is very difficult to follow the work flow and makes the program difficult to understand and maintain.
-* The try*finally construction can sometimes be used to perform the error cleanup that a goto sometimes performs. 
+* The `try-finally` construction can sometimes be used to perform the error cleanup that a goto sometimes performs. 
 * A `goto` statement can always be written by another formal statement.
 
 ### Chapter 19: General Control Issue
-#### a.Boolean Expressions
+#### a. Boolean Expressions
 * Making boolean expression simple and readable.
 * Comparing a character against `\0` instead of `0`.
 
-#### b.Compound Statements (Blocks)
+#### b. Compound Statements (Blocks)
 * Write pairs of braces together: Fill in the middle after you write both the opening and closing parts of a block.
 * Use braces to clarify conditionals.
 
-#### c.Null Statements
+#### c. Null Statements
 * Null statements are uncommon, so make them obvious, add comments to explain why one is used.  
 
-#### d.Taming Dangerously Deep Nesting
+#### d. Taming Dangerously Deep Nesting
 * Simplify a nested if by retesting part of the condition.
 * Simplify a nested if by using a break block, move some of the nested blocks into their own methods or use polymorphism.
-* Convert a nested if to a set of if*then*else.
+* Convert a nested if to a set of `if-then-else`.
 * Rewrite the code use a status variable.
 * Use exceptions.
 
-#### e.A Programming Foundation: Structure Programming 
+#### e. A Programming Foundation: Structure Programming 
 * Structure programming is a simple idea that is still relevant: you can build any program out of a combination of sequences, selections and iterations.
 
 ### Chapter 20: The Software Quality Landscape
@@ -145,12 +145,18 @@ Source: [Code Complete 2nd Edition](http://aroma.vn/web/wp-content/uploads/2016/
 	* Code is duplicated, long, nested and poor cohesion, abstraction, encapsulation.
 * Specific Refactoring: 
 	* Never write document code or design ahead. 
-* Data level refactoring: Rename a variable with a clearer or more informative name, Replace a magic number with a named constant, use a local variable for local purposes rather than a parameter
-* Statement*Level refactoring: Use break or return instead of a loop control variable, decompose a boolean expression, create and use null objects instead of testing for null values
-* Routine*Level refactoring: remove a parameter if a routine no longer uses a parameter, add a parameter when needed.
-* Class implementing refactoring: include pulling up or pushing down data or methods; separating or combining classes with subclasses.
-* Class interface refactoring: move a routine to another class; hide a delegate, replace inheritance with delegation,… 
-* System level refactoring: create a definitive reference source for data you can not control; replace error code with exceptions or vice versa.
+* Data level refactoring: 
+	* Rename a variable with a clearer or more informative name; Replace a magic number with a named constant, use a local variable for local purposes rather than a parameter
+* Statement Level refactoring: 
+	* Use break or return instead of a loop control variable, decompose a boolean expression, create and use null objects instead of testing for null values
+* Routine Level refactoring: 
+	* Remove a parameter if a routine no longer uses a parameter, add a parameter when needed.
+* Class implementing refactoring: 
+	* Include pulling up or pushing down data or methods; separating or combining classes with subclasses.
+* Class interface refactoring: 
+	* Move a routine to another class; hide a delegate, replace inheritance with delegation,… 
+* System level refactoring: 
+	* Create a definitive reference source for data you can not control; replace error code with exceptions or vice versa.
 * Refactoring safely: 
 	* Keep refactoring small; do refactoring on at a time; make frequently checkpoints.
 	* Add test cases; use your compiler warning; review the changes. 
